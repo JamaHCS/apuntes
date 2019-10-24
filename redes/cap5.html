@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Capitulo 5</title>
+
+    <link rel="stylesheet" href="../bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Capitulo 5</h1>
+        <h3>Encapsulamiento de Ethernet</h3>
+        <p>Es la tecnologia LAN mas utilizada a dia de hoy. Definida en los estandares de IEEE 802.2 y 802.3</p>
+        <p>Admite anchos de banda que van desde los 10mbps hasta los 100gbps</p>
+        <p>funciona en la capa de enlace de datos y en la capa fisica</p>
+        <p>La subcapa LLC, que es la capa superior en la capa de enlace de datos, maneja la comuniacion entre las capas
+            superiores e inferiores. trabaja con el software del NIC</p>
+        <p>LA subcapa MAC trabaja con el hardware del NIC</p>
+        <h4>subcapa MAC</h4>
+        <p>Tine dos responsabilidades</p>
+        <ul>
+            <li>Encapsulamiento de datos</li>
+            <li>Control de acceso al medio</li>
+        </ul>
+        <p>Esta capa se encarga de convertir la trama a bits para mandarlo al medio de transmision</p>
+
+        <h4>Evolucion del Ethernet</h4>
+        <p>Desde 1973, ha ido creciendo la velocidad maxima de transmision desde 10mbps hasta 100gbps</p>
+        <h4>Campos de la trama</h4>
+        <ul>
+            <li>Preambulo: Dice donde va a iniciar una trama</li>
+            <li>Direcciones MAC de origen</li>
+            <li>Direcciones MAC de destino</li>
+            <li>EtherType: Dice que tipo de protocolo estoy utilizando</li>
+            <li>Datos</li>
+            <li>FCS:Metodo de deteccion de errores.</li>
+        </ul>
+        <p>Cuanto mide una trama? 64 bytes como minimo y 1518 bytes como maximo</p>
+        <p>Si la trama es menor o mayor, se descarta la trama</p>
+        <h3>MEtodos de envio de tramas</h3>
+        <ul>
+            <li>Almacenamiento y reenvio</li>
+            Tiene que recibir toda la trama para poderla reenviar
+            <li>MEtodo de corte</li>
+            Con solo recibir la cabecera donde contenga las direcciones de origen y de destino, está lista para poder
+            reenviar la trama
+        </ul>
+        <ul>
+            <li>
+                <h5>Simplex</h5>
+            </li>
+            Solo un dispositivo puede recibir o transmitir
+            <li>
+                <h5>Duplex</h5>
+            </li>
+            Los dos dispositivos pueden transmitir y recibir datos a la vez
+        </ul>
+        <h3>AutoMDIX</h3>
+        <p>Internamente, cuando detectan un cable ya sea cruzado o derecho, se autoconfigura el puerto para asi poder
+            trabajar con el cable
+        </p>
+        <p>Ethernet trabaja con direcciones MAC(Fisicas) y direcciones IP(logicas)</p>
+
+        <p><span>Ver los videos de ARP</span></p>
+    </div>
+</body>
+
+</html>

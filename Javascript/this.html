@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This - javascript</title>
+
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../railscasts.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script src="../highlight.pack.js"></script>
+    <script src="../script.js"></script>
+
+</head>
+
+<body>
+    <div class="container mt-4 mb-4">
+        <h1>This - javascript</h1>
+    </div>
+    <div class="js">
+        <div class="container">
+            <h3>
+                This es el objeto contexto de Javascript en el cual se está ejecutando el código actual.
+            </h3>
+        </div>
+    </div>
+    <div class="container mt-2 mb-4">
+        <ul>
+            <li>
+                Todo el javascript del navegador vive dentro de "Window"
+            </li>
+            <li>
+                ¿Dónde estoy ejecutando el código? <br />
+                <span class="ml-4 comment">This cambia, dependiendo de si se está ejecutando en node o en el
+                    navegador.</span>
+            </li>
+            <li>
+                Indicar el la dirección a seguir de un metodo en cualquier objeto.
+            </li>
+        </ul>
+
+        <p>
+            <span class="highlighted ml-5">
+                Ejemplo:
+            </span>
+        </p>
+
+        <div class="row">
+            <pre><code class="code javascript">//This es especialmente importante en Javascript orientado a objetos.
+                
+const pokemon = {
+    container: document.querySelector("#container"),
+    renderName: function(name) {
+        this.container.textContent = `Pokemon encontrado ${name}`;
+    },  
+    renderType: function(type) {
+        this.container.textContent = `Es de tipo ${type}`;
+    }
+};
+
+pokemon.renderName(Pikachu);              
+            </code></pre>
+        </div>
+
+        <h2 class="separated mt-5">Bind</h2>
+        <p>
+            <span class="highlighted">Bind</span> es una función en la cual le puedes pasar el contexto deseado a this,
+            para que en situaciones donde manejes mas de un "Objeto" en la misma aignación, puedas indicarle sobre cual
+            trabajará el <span class="highlighted">.this</span>.
+            <br />
+            <span class="highlighted">Dato importante de Bind:</span> Si bien está asignando this a otro contexto, esto
+            nos crea otra función. Entonces...
+            <p>
+                <span class="highlighted ml-5">
+                    Ejemplo:
+                </span>
+            </p>
+        </p>
+
+        <div class="row">
+            <pre><code class="code javascript">const renderName = pokemon.renderName;
+
+const who = renderName.bind(pokemon);
+who("Pikachu");                          
+            </code></pre>
+        </div>
+
+        <h2 class="separated mt-5">Call</h2>
+        <p>
+            Si yo no quiero generar otra función y generar mi reestructuración del contexto per sé en la función; para
+            esto existe la función Call.
+        </p>
+        <p>
+            Call recibe 2 parametros en la función, primero el this, y luego los parametros de la función.
+        </p>
+        <p>
+            <span class="highlighted ml-5">
+                Ejemplo:
+            </span>
+        </p>
+
+        <div class="row">
+            <pre><code class="code javascript">const renderName = pokemon.renderName;
+renderName.call(pokemon, "Pikachu");                                     
+            </code></pre>
+        </div>
+
+    </div>
+
+    <div class="container mt-4 mb-4">
+        <div>
+            <h1>Implementación de .This con clases</h1>
+        </div>
+        <div class="row">
+            <p>
+                ¿Cuál es la forma mas eficiente con la que puedo trabajar en mi día a día?
+                <span class="comment">
+                    Respuesta: Clases.
+                </span>
+                <br />
+                Para optimizar esto, es mejor hacer uso de clases.
+            </p>
+        </div>
+        <div class="row">
+            <pre><code class="code javascript">class Pokemon {
+container = document.querySelector("#container");
+renderName(name) {
+    this.container.textContent = `Pokemon encontrado ${name}`;
+}
+renderType(type) {
+    this.container.textContent = `Es de tipo ${type}`;
+}
+}
+
+const pikachu = new Pokemon();
+pikachu.renderName("Pikachu");
+pikachu.renderType("Electrico");                                             
+            </code></pre>
+        </div>
+    </div>
+
+    <div class="ml-5 mb-3">
+        <span class="comment">
+            Fuente: <a href="https://www.youtube.com/watch?v=PDiw-9NpyRQ"
+                target="_blank">https://www.youtube.com/watch?v=PDiw-9NpyRQ</a>
+        </span>
+    </div>
+</body>
+
+</html>

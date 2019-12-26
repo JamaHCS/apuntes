@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Conceptos básicos</title>
+
+    <link rel="stylesheet" href="../bootstrap.min.css">
+    <link rel="stylesheet" href="../railscasts.css">
+    <link rel="stylesheet" href="../styles.css">
+
+    <script src="../highlight.pack.js"></script>
+    <script src="../script.js"></script>
+
+</head>
+
+<body>
+    <div class="container mt-4 mb-4">
+        <h1>Curso de Fundamentos de álgebra lineal en Python para AI</h1>
+        <h4>Conceptos básicos</h4>
+        <span class="comment">//Elementos básicos de matemáticas para el machine learning.</span>
+
+        <p id="escalar">
+            <span class="highlighted">Escalar:</span> Es un simple número. En Python puede ser mucho mas complejo: puede
+            ser int, double, float, boolean, hasta puede ser un dato nulo.
+        </p>
+
+        <p>
+            ¿En qué se diferencía un escalar, un vector, matriz y un tensor? En los grados de libertad que estamos teniendo para interactuar.
+        </p>
+
+        <p id="vector">
+            Un vector es un conjunto de números, una matrz es un conjuntos de vectores y un tensor es un conjunto de matrices.
+        </p>
+        <p>
+            En el siguiente código podemos ver un ejemplo rápido de como se grafica un tensor.
+        </p>
+
+        <div id="Codigo">
+            <pre><code class="code javascript">%matplotlib inline
+import matplotlib.pyplot as plt
+//Las dos lineas pasadas son para la graficación de tensores.
+
+import numpy as np //Numerical Python, para poder manejar matriz y tensores.
+
+escalar = 42
+print("Escalar: ", escalar)
+
+vector = np.array([2,3,5,7])
+print("\nVector: ",vector)
+
+matriz = np.array([[1,2,3], [4, 5, 6], [7, 8, 9]])
+print("\nMatriz: ",matriz)
+
+tensor = np.array([
+    [[255, 255, 255], [255, 255, 255], [255, 255, 255]],
+    [[0, 0, 0], [0, 0, 0], [0, 0 ,0]],
+    [[128, 128, 128], [128, 128, 128], [128, 128, 128]],
+    
+])
+
+print("\nTensor: ")
+plt.imshow(tensor, interpolation='nearest')
+plt.show()
+</code></pre>
+            <p class="font-weight-bold mt-5">Origina esto:</p>
+            <img src="./src/conceptosBasicos1.jpg" alt="Resultado en Jupyter">
+        </div>
+    </div>
+
+</body>
+
+</html>

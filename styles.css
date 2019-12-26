@@ -56,3 +56,30 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+
+.ordenamiento {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 2em 0;
+}
+
+.sorts {
+  margin: 0;
+}
+
+.sorts img {
+  width: 300px;
+}
+
+.algorithms {
+  width: auto;
+  max-width: 899px;
+  min-width: 300px;
+}

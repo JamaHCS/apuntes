@@ -1,0 +1,15 @@
+Arquitectura de software
+
+Etapas de proceso desarrollo de software
+
+El proceso de desarrollo de software tradicional funciona de una manera lineal y organizada lo que quiere decir que que para seguir con la siguiente etapa se debe primero terminar la otra.
+
+Análisis de requerimientos :en esta etapa todo nace a través de un disparador un idea un análisis de mercado un problema al cual se le quiere buscar solución.de esta forma tenemos una idea muy clara del problema que vamos a resolver.
+
+Diseño de la solución : en esta se plantean y se detallan la diferentes soluciones sus requerimientos y documentación etc… al final de este pas0 se debe tener plateada la solución del problema
+
+Desarrollo y evolución : en etapa desarrollamos el software lo que es la solución al problema.
+
+Despliegue : aquí vamos a necesitar infraestructura y roles de operación para poder poner el artefacto a disponibilidad.por ejemplo en una app web necesitaremos una servidor en donde alojarla bases de datos etc… o pones un app móvil en play store.
+
+mantenimiento y evolución : aquí seguimos dándole seguimiento al solución del problema resolviendo bugs agregando nuevas funcionales de ser necesario hasta que se acabe el tiempo de vida de la app.

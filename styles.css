@@ -12,7 +12,7 @@
   border-radius: 20px;
 }
 
-span.comment {
+.comment {
   filter: opacity(60%);
   font-style: italic;
 }
@@ -82,4 +82,9 @@ a:hover {
   width: auto;
   max-width: 899px;
   min-width: 300px;
+}
+
+.img-article {
+  max-width: 80%;
+  height: auto;
 }

@@ -88,3 +88,15 @@ a:hover {
   max-width: 80%;
   height: auto;
 }
+
+.upper {
+  padding-top: 2rem;
+}
+
+.leftMark::before {
+  content: "";
+  border-left: 1px solid #888;
+  padding-left: 0.5em;
+  height: 5px;
+  width: 1px;
+}

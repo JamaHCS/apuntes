@@ -1,3 +1,7 @@
+/* .container {
+  margin-top: 3em;
+} */
+
 .inverted {
   filter: invert(100%);
 }
@@ -17,8 +21,13 @@
   font-style: italic;
 }
 
-span.highlighted {
+span.highlighted,
+span,
+.highlighted li {
   font-weight: 700;
+}
+.highlighted ul li {
+  font-weight: initial;
 }
 
 h1 {
@@ -45,6 +54,7 @@ h1 {
   display: block;
   border-bottom: solid #888 1px;
   padding-bottom: 0.4rem;
+  margin-bottom: 3em;
 }
 
 a {
@@ -91,6 +101,7 @@ a:hover {
 
 .upper {
   padding-top: 2rem;
+  height: 10px;
 }
 
 .leftMark::before {

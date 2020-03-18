@@ -56,6 +56,9 @@
             <div class="col-md-6">
                 <div class="row">
                     <h4>La programación orientada a objetos está basada en 4 pilares:</h4>
+                    <span class="comment">
+                        //Punto 2
+                    </span>
                     <ul>
                         <li class="font-weight-bolder">Encapsulamiento</li>
                         Capacidad para hacer el codigo modular, reutilizable y seguro de si mismo.
@@ -131,10 +134,13 @@
         </div>
         <div class="row">
             <div class="row">
-                <p>
-                    Los Comportamientos serán todas las operaciones que el objeto puede hacer, suelen ser verbos o
-                    sustantivos y verbo. Algunos ejemplos pueden ser que el usuario pueda hacer login y logout.
-                </p>
+                <div class="col">
+
+                    <p>
+                        Los Comportamientos serán todas las operaciones que el objeto puede hacer, suelen ser verbos o
+                        sustantivos y verbo. Algunos ejemplos pueden ser que el usuario pueda hacer login y logout.
+                    </p>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-6">
@@ -161,7 +167,7 @@
                 </div>
             </div>
         </div>
-        <div class="separated upper mb-3"></div>
+        <div class="separated upper"></div>
 
         <div class="row">
             <div class="col-md-6">
@@ -204,6 +210,206 @@
                 </p>
             </div>
         </div>
+        <div class="separated"></div>
+        <div class="row">
+            <div class="col">
+                <h4>Estructura básica de clase, atributo, método y objeto.</h4>
+                <span class="comment">
+                    Punto 3
+                </span>
+                <div class="row">
+                    <table class="pointThree">
+                        <tr>
+                            <td>
+                                <div></div>
+                            </td>
+                            <td>
+                                <div>
+                                    Sintaxis
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Uso
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    Clase
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <pre>
+<code class="code java">public static class nombreDeLaClase{ ... }</code>
+                                    </pre>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Se usa para definir la creación de una clase
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    Atributo
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <pre>
+<code class="code java">
+Objeto.nombreDelAtributo;
+</code>
+                                    </pre>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Se usa para hacer referencia al atributo en cuestión
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    Método
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <pre>
+<code class="code java">
+Objeto.nombreDelMetodo(parametroUno, parametroDos);
+</code>
+                                    </pre>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Se usa para hacer referencia al metodo a ejecutar; es como si invocaramos un
+                                    atributo, solo que agregando los parentesis y sus respectivos parametros.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    Objeto
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <pre>
+<code class="code java">
+ClassName ObjectName = new ClassName(parametroUno, parametroDos);
+</code>
+                                    </pre>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Se usa para poder iterar un nuevo objeto de la clase en cuestión.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="upper separated"></div>
+
+        <div class="row">
+            <div class="col">
+                <h4>Herencia</h4>
+                <p>
+                    <span class="comment">
+                        //Punto 4
+                    </span>
+                </p>
+                <p>
+                    En el momento en el que hacemos que una clase herede de otra, le estamos dando acceso a toda la
+                    estructura de una clase, llamada clase padre o super clase, como sus atributos, metodos y
+                    comportamientos.
+                </p>
+                <pre>
+                <code class="code java">
+//En Java no puede haber herencia multiple (En las interfaces, sí).
+
+public class Car extends Vehicle {
+    //Atributos
+    ...
+
+    Car(String matricle, String brand, double mileage, int passengers) {
+        super(matricle, brand, mileage);
+        this.passengers = passengers;
+    }
+}
+                </code>
+            </pre>
+            </div>
+        </div>
+
+        <div class="upper separated"></div>
+
+        <div class="row">
+            <div class="col">
+                <h4>Polimorfismo</h4>
+                <p>
+                    <span class="comment">
+                        //Punto 5
+                    </span>
+                </p>
+                <p>
+                    Es la capacidad en un objeto, de poder tener un comportamiento definido por su clase padre, pero a
+                    su vez, poder cambiar o complementar este comportamiento. (Esto en las diferentes clases hijas de la
+                    super clase en cuestión). <br /><br>
+                    <span class="comment">//Para indicar que se hará uso del polimorfismo, hay que poner "@Override" en
+                        la linea
+                        superior al metodo a sobreescribir.</span>
+                </p>
+
+                <pre>
+                <code class="code java">
+public abstract class Vehicle {
+    //Atributos
+    ...
+
+    public String printInformation() {
+        return "ID: " + this.getId() +
+        "\nMatricula: " + this.getMatricle() +
+        "\nMarca: " + this.getBrand() +
+        "\nKilometrage: " + this.getMileage() +
+        "\nEstado de verificación: " + this.isVerificated();
+    }
+}
+                </code>
+            </pre>
+
+                <pre><code>
+@Override
+public String printInformation() {
+    return super.printInformation() +
+    "\nMáximo de pasajeros: " + this.getPassengers();
+}
+</code></pre>
+
+                <pre><code>
+@Override
+public String printInformation() {
+    return super.printInformation() +
+    "\nCilindrada: " + this.getDisplacement();
+}
+</code></pre>
+            </div>
+        </div>
+
+        <div class="separated upper"></div>
     </div>
 </body>
 

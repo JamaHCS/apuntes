@@ -143,6 +143,23 @@ a:hover {
   display: flex;
 }
 
+.pointThree {
+  border: solid 1px #606060;
+  border-radius: 1rem;
+}
+
+.pointThree tr td {
+  border-right: solid 1px #606060;
+}
+
+.pointThree tr {
+  border-bottom: solid 1px #606060;
+}
+
+.pointThree tr td div {
+  padding: 0.5rem;
+}
+
 @media (max-width: 768px) {
   .leftMark {
     display: none;

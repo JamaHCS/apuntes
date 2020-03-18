@@ -218,106 +218,110 @@
                     Punto 3
                 </span>
                 <div class="row">
-                    <table class="pointThree">
-                        <tr>
-                            <td>
-                                <div></div>
-                            </td>
-                            <td>
-                                <div>
-                                    Sintaxis
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    Uso
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>
-                                    Clase
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <pre>
+                    <div class="overflow-auto">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div></div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>
+                                            Sintaxis
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        <div>
+                                            Uso
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>
+                                    <div>
+                                        Clase
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <pre>
 <code class="code java">public static class nombreDeLaClase{ ... }</code>
                                     </pre>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    Se usa para definir la creación de una clase
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>
-                                    Atributo
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <pre>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Se usa para definir la creación de una clase
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        Atributo
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <pre>
 <code class="code java">
 Objeto.nombreDelAtributo;
 </code>
                                     </pre>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    Se usa para hacer referencia al atributo en cuestión
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>
-                                    Método
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <pre>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Se usa para hacer referencia al atributo en cuestión
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        Método
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <pre>
 <code class="code java">
 Objeto.nombreDelMetodo(parametroUno, parametroDos);
 </code>
                                     </pre>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    Se usa para hacer referencia al metodo a ejecutar; es como si invocaramos un
-                                    atributo, solo que agregando los parentesis y sus respectivos parametros.
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div>
-                                    Objeto
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    <pre>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Se usa para hacer referencia al metodo a ejecutar; es como si invocaramos un
+                                        atributo, solo que agregando los parentesis y sus respectivos parametros.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        Objeto
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <pre>
 <code class="code java">
 ClassName ObjectName = new ClassName(parametroUno, parametroDos);
 </code>
                                     </pre>
-                                </div>
-                            </td>
-                            <td>
-                                <div>
-                                    Se usa para poder iterar un nuevo objeto de la clase en cuestión.
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        Se usa para poder iterar un nuevo objeto de la clase en cuestión.
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -329,13 +333,19 @@ ClassName ObjectName = new ClassName(parametroUno, parametroDos);
                 <h4>Herencia</h4>
                 <p>
                     <span class="comment">
-                        //Punto 4
+                        //Punto 4 y 8
                     </span>
                 </p>
                 <p>
                     En el momento en el que hacemos que una clase herede de otra, le estamos dando acceso a toda la
                     estructura de una clase, llamada clase padre o super clase, como sus atributos, metodos y
                     comportamientos.
+                </p>
+                <p>
+                    Un ejemplo claro donde podemos utilizar herencia es cuando le damos un nivel mas de abstracción a
+                    nuestro software, sacando un modelo mas genérico del objeto a tratar. <span class="comment">(Como en
+                        el ejemplo, hecho en practicas, donde implementamos la super clase "Vehicle" y las sub clases
+                        "Car" y "Motocycle". Código de ejemplo mas adelante).</span>
                 </p>
                 <pre>
                 <code class="code java">
@@ -391,25 +401,85 @@ public abstract class Vehicle {
                 </code>
             </pre>
 
-                <pre><code>
-@Override
-public String printInformation() {
-    return super.printInformation() +
-    "\nMáximo de pasajeros: " + this.getPassengers();
+                <pre>
+                    <code class="code java">
+public class Car extends Vehicle{
+
+    @Override
+    public String printInformation() {
+        return super.printInformation() +
+        "\nMáximo de pasajeros: " + this.getPassengers();
+    }
 }
 </code></pre>
 
-                <pre><code>
-@Override
-public String printInformation() {
-    return super.printInformation() +
-    "\nCilindrada: " + this.getDisplacement();
+                <pre>
+                    <code class="code java">
+public class Motocycle extends Vehicle{
+                
+    @Override
+    public String printInformation() {
+        return super.printInformation() +
+        "\nCilindrada: " + this.getDisplacement();
+    }
 }
 </code></pre>
             </div>
         </div>
 
         <div class="separated upper"></div>
+
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <h4>
+                        Clases y metodos estáticos
+                    </h4>
+                    <p>
+                        <span class="comment">//Punto 6</span> <br>
+                        La palabra reservada <span class="highlighted">Static </span> implica que algo se define a un
+                        contexto general, no a contexto de objeto; por lo tanto, lo que sea declarado como Static, no
+                        estará sujeto a la creación del objeto en sí. <br>
+                    </p>
+                    <div class="d-block">
+                        <pre>
+<code class="code java">
+public final static int pi = 3.141592;
+</code>
+                    </pre>
+                    </div>
+                    <p class="d-block">
+                        Aquí estamos viendo su uso en los atributos de la clase math, clase propia del JDK de Java.
+                    </p>
+                    <ul>
+                        Demás usos del <span class="highlighted">Static</span>.
+                        <li>Constantes (en combinación con <span class="highlighted"></span>final</span>).</li>
+                        <li>Singletons (objetos de que se debería usar una sola instancia).</li>
+                        <li>Variables globales.</li>
+                        <li>Metodos globales.</li>
+                        <li>Clases internas públicas.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="separated upper"></div>
+
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <h4>Encapsulamiento</h4>
+                    <p>
+                        <span class="comment">Punto 7</span> <br>
+                        Este concepto consiste en la ocultación del estado o de los datos miembro de un objeto, de forma
+                        que sólo es posible modificar los mismos mediante los métodos definidos para dicho objeto.
+                        <span class="comment">//Con los getters y setters</span> <br>
+                        Los modificares de acceso definen desde que contexto del programa se puede acceder a que cosa.
+                    </p>
+                    <img src="./assets/Acceso.png" alt="Modificadores de acceso" class="mx-auto">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

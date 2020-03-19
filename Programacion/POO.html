@@ -372,7 +372,7 @@ public class Car extends Vehicle {
                 <h4>Polimorfismo</h4>
                 <p>
                     <span class="comment">
-                        //Punto 5
+                        //Punto 5 y 9
                     </span>
                 </p>
                 <p>
@@ -448,17 +448,19 @@ public final static int pi = 3.141592;
 </code>
                     </pre>
                     </div>
-                    <p class="d-block">
-                        Aquí estamos viendo su uso en los atributos de la clase math, clase propia del JDK de Java.
-                    </p>
-                    <ul>
-                        Demás usos del <span class="highlighted">Static</span>.
-                        <li>Constantes (en combinación con <span class="highlighted"></span>final</span>).</li>
-                        <li>Singletons (objetos de que se debería usar una sola instancia).</li>
-                        <li>Variables globales.</li>
-                        <li>Metodos globales.</li>
-                        <li>Clases internas públicas.</li>
-                    </ul>
+                    <div class="text-right ml-3">
+                        <p class="d-block">
+                            Aquí estamos viendo su uso en los atributos de la clase math, clase propia del JDK de Java.
+                        </p>
+                        <ul class="viñetasright">
+                            Demás usos del <span class="highlighted">Static</span>.
+                            <li>Constantes (en combinación con <span class="highlighted"></span>final</span>).</li>
+                            <li>Singletons (objetos de que se debería usar una sola instancia).</li>
+                            <li>Variables globales.</li>
+                            <li>Metodos globales.</li>
+                            <li>Clases internas públicas.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -477,6 +479,132 @@ public final static int pi = 3.141592;
                         Los modificares de acceso definen desde que contexto del programa se puede acceder a que cosa.
                     </p>
                     <img src="./assets/Acceso.png" alt="Modificadores de acceso" class="mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <div class="separated upper"></div>
+
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div>
+                        <h4>Excepciones</h4>
+                        <span class="comment">//Punto 10</span>
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">
+                                    <div>Nombre</div>
+                                </th>
+                                <th scope="col">
+                                    <div>
+                                        Descripción
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                <div>
+                                    FileNotFoundException
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Lanza una excepción cuando el fichero no se encuentra.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    ClassNotFoundException
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Lanza una excepción cuando no existe la clase.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    EOFException
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Lanza una excepción cuando llega al final del fichero.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    ArrayIndexOutOfBoundsException
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Lanza una excepción cuando se accede a una posición de un array que no exista.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    NumberFormatException
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Lanza una excepción cuando se procesa un numero pero este es un dato alfanumérico.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    NullPointerException
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Lanza una excepción cuando intentando acceder a un miembro de un objeto para el que
+                                    todavía no hemos reservado memoria.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    IOException
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Generaliza muchas excepciones anteriores. La ventaja es que no necesitamos controlar
+                                    cada una de las excepciones.
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    Excepcion
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    Es la clase padre de IOException y de otras clases. Tiene la misma ventaja que
+                                    IOException.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

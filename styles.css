@@ -160,6 +160,14 @@ a:hover {
   padding: 0.5rem;
 }
 
+.viñetasright {
+  list-style: none;
+}
+
+.viñetasright li::after {
+  content: "    <---";
+}
+
 @media (max-width: 768px) {
   .leftMark {
     display: none;
